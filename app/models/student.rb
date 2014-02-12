@@ -1,7 +1,9 @@
 require_relative '../../db/config'
 
 class Student < ActiveRecord::Base
-# implement your Student model here
+  validates :email, uniqueness: true, format: { with: /.+@[^.]+[.].{2,}/,
+      message: "only proper email format allowed" }
+  validates :age, numericality: { greater_than: 5 }
 
   def age
     now = Date.today
