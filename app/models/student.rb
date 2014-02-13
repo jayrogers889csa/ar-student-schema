@@ -2,10 +2,12 @@ require_relative '../../db/config'
 
 class Student < ActiveRecord::Base
   # attr_reader :phone
-  validates :email, uniqueness: true, format: { with: /.+@[^.]+[.].{2,}/,
-      message: "only proper email format allowed" }
+
+  belongs_to :teacher
+
+  validates :email, uniqueness: true, format: { with: /.+@[^.]+\..{2,}/, message: "only proper email format allowed" }
   validates :age, numericality: { greater_than: 5 }
-  validate :check_phone
+  # validate :check_phone
 
   def age
     now = Date.today
