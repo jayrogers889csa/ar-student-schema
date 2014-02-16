@@ -6,14 +6,9 @@ class CreateStudents < ActiveRecord::Migration
   def change
     create_table :students do |t|
       t.integer :teacher_id
-      t.string :first_name
-      t.string :last_name
+      super
       t.string :gender
       t.date :birthday
-      t.string :email
-      t.string :phone
-
-      t.timestamps
     end
   end
     # HINT: checkout ActiveRecord::Migration.create_table

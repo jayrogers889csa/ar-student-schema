@@ -1,20 +1,11 @@
 require_relative '../../db/config'
 
-class Teacher < ActiveRecord::Base
-  has_many :students
+class Teacher < Person
 
-  # validates :email, uniqueness: true
-  # validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, message: "Only letters allowed" }
+  has_many :enrollments
+  has_many :students, through: :enrollments
 
-  def name
-    "#{first_name} #{last_name}"
-  end
-
-  def email
-  end
-
-  def phone
-  end
-
+  validates :email, uniqueness: true
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, message: "Only proper email format allowed" }
 
 end
