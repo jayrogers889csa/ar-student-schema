@@ -16,3 +16,5 @@ module StudentsImporter
     end
   end
 end
+
+# StudentsImporter.import('./db/data/students.csv')
