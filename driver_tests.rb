@@ -2,6 +2,25 @@ require './app/models/teacher'
 require './app/models/student'
 require './app/models/enrollment'
 
+
+# def create_person(type, first_name, last_name, email, birthday)
+#   if type == 'student'
+#     Student.create(first_name: first_name, last_name: last_name, email: email, birthday: birthday)
+#   else
+#     Teacher.create(first_name: first_name, last_name: last_name, email: email, birthday: birthday)
+#   end
+# end
+
+# first_names = []
+# last_names = []
+# birthday = []
+# email = []
+
+# 9.times do |i|
+#   create_person('student', first_names[i])
+#   create_person('teacher', first_names[i])
+# end
+
 bran = Student.new(first_name: "bran", last_name: "jones", email: "k234@asd1h.com", birthday: '01/02/1990')
 mikey = Student.new(first_name: "mikey", last_name: "giraffe", email: "peng234uin@zoo.com", birthday: '01/01/1990' )
 franky = Student.new(first_name: "franky", last_name: "ocean", email: "ocea34n@zoo.com", birthday: '01/01/1990')

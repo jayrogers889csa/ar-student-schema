@@ -1,6 +1,6 @@
 require_relative '../config'
 
-# this is where you should use an ActiveRecord migration to
+# # this is where you should use an ActiveRecord migration to
 
 class CreatePeople < ActiveRecord::Migration
   def change
@@ -13,5 +13,5 @@ class CreatePeople < ActiveRecord::Migration
       t.timestamps
     end
   end
-    # HINT: checkout ActiveRecord::Migration.create_table
+#     # HINT: checkout ActiveRecord::Migration.create_table
 end
